@@ -1,0 +1,19 @@
+{% extends "AppBlog/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+    <h2> Las empresas ubicadas en {{ubicacion}} son: </h2>
+
+    {% if empresas %}
+    
+    <ul>
+        {% for empresa in empresas %}
+            <li style="color: brown;">
+                {{empresa}}
+            </li>
+        {% endfor %} 
+    </ul>
+    
+    {% endif %} 
+
+{% endblock %}
