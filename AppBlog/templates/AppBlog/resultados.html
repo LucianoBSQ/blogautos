@@ -2,20 +2,22 @@
 {% load static %}
 {% block contenidoQueCambia %}
     
-    <h2> Las empresas ubicadas en {{ubicacion}} son: </h2>
+    
 {% if empresas %}
+<h2> Las empresas ubicadas en {{ubicacion}} son: </h2>   
     <ul>
         {% for empresa in empresas %}
-            <li style="color: brown;">
+            <li style="color: blue;">
                 {{empresa}}
             </li>
         {% endfor %} 
     </ul>
 
 {% else %}
-    <p>No hay empresas en esa ubicacion</p>
+  <h1 style="color:red;">No hay empresas ubicadas en  {{ubicacion}}.</h1>
+  
     
-    {% endif %} 
-    <p style="color:red;">{{respuesta}} </p>
+{% endif %} 
+    
 
 {% endblock %}
