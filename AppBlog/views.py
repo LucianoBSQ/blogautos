@@ -99,7 +99,7 @@ def buscar(request):
       else:   
             respuesta = "No enviaste Datos"
 
-            return HTTPResponse(respuesta)      
+            return render(request, "appBlog/inicio.html", {"respuesta":respuesta})      
 
 
 
