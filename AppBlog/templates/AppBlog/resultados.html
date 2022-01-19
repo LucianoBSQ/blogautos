@@ -1,11 +1,9 @@
 {% extends "AppBlog/padre.html" %}
 {% load static %}
 {% block contenidoQueCambia %}
-
-    <h2> Las empresas ubicadas en {{ubicacion}} son: </h2>
-
-    {% if empresas %}
     
+    <h2> Las empresas ubicadas en {{ubicacion}} son: </h2>
+{% if empresas %}
     <ul>
         {% for empresa in empresas %}
             <li style="color: brown;">
@@ -13,7 +11,11 @@
             </li>
         {% endfor %} 
     </ul>
+
+{% else %}
+    <p>No hay empresas en esa ubicacion</p>
     
     {% endif %} 
+    <p style="color:red;">{{respuesta}} </p>
 
 {% endblock %}

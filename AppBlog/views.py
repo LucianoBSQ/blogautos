@@ -95,11 +95,11 @@ def buscar(request):
             nombre = Empresas.objects.filter(ubicacion=ubicacion)
 
             return render(request, "AppBlog/resultados.html", {"empresas":nombre, "ubicacion":ubicacion})
+      
+      
 
       else:   
             respuesta = "No enviaste Datos"
 
-            return render(request, "appBlog/inicio.html", {"respuesta":respuesta})      
-
-
+            return render (request, "AppBlog/resultados.html",{"respuesta":respuesta})
 
